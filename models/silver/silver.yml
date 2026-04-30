@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: silver_transformation
+    description: Cleaned basketball silver layer
+
+    columns:
+      - name: rank
+        tests:
+          - not_null
+          - unique
+
+      - name: player
+        tests:
+          - not_null
+
+      - name: active_player
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1]
+
+      - name: country
+        tests:
+          - not_null
