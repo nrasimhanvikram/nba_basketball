@@ -33,7 +33,14 @@ models:
   retail_project:
     # Config indicated by + and applies to all files under models/example/
     staging:
-      +materialized: view
+      +materialized: table
       +database: BASKETBALL
       +schema: BRONZE
+
+    silver:
+      +materialized: view
+      +database: BASKETBALL
+      +schema: SILVER
+
+
     
